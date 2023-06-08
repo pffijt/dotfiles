@@ -1,0 +1,7 @@
+alias g='git'
+alias gb='git checkout -b'
+alias gm='git commit -m'
+alias ga='git commit --amend --no-edit'
+alias gp='git push origin $(git branch --show-current)'
+alias gpa='az repos pr create --delete-source-branch true --repository $(basename `g rev-parse --show-toplevel`) --source-branch $(git branch --show-current) --title "$(git show --pretty=format:"%B" --no-patch)" --description "$(git show --pretty=format:"%B" --no-patch)"'
+
